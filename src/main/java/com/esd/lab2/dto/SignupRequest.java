@@ -15,12 +15,15 @@ import jakarta.validation.constraints.*;
  */
 public record SignupRequest(
 
-        // TODO: add @Email and @NotBlank annotation
+        @NotBlank
+        @Email
         String email,
 
-        // TODO: add @NotBlank and @Size(min = 8, max = 64) annotations
+        @NotBlank
+        @Size(min = 8, max = 64)
         String password,
 
-        // TODO: add @NotBlank and @Size(max = 100) annotations
+        @NotBlank
+        @Size(max = 100)
         String fullName
 ) {}
